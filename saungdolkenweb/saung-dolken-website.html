@@ -1,0 +1,1824 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saung Dolken Resort Syariah - Wedding & Engagement Venue</title>
+    <meta name="description" content="Rayakan cinta di surga yang damai. Saung Dolken Resort Syariah menyediakan venue pernikahan dan lamaran islami yang mewah dengan suasana tropis yang romantis.">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        /* Reset & Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .font-serif {
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* Color Variables */
+        :root {
+            --gold: #D4AF37;
+            --gold-light: #F4E4BC;
+            --ivory: #FAF8F0;
+            --green: #8AA399;
+            --green-light: #A8C8BC;
+            --dark: #2c3e50;
+            --gray: #6c757d;
+            --white: #ffffff;
+        }
+
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 1rem 0;
+            transition: all 0.3s ease;
+            background: transparent;
+        }
+
+        .navbar.scrolled {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--gold), var(--gold-light));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+
+        .logo-text h1 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: white;
+            transition: color 0.3s ease;
+        }
+
+        .logo-text p {
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.8);
+            transition: color 0.3s ease;
+        }
+
+        .navbar.scrolled .logo-text h1 {
+            color: var(--dark);
+        }
+
+        .navbar.scrolled .logo-text p {
+            color: var(--gray);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .navbar.scrolled .nav-links a {
+            color: var(--dark);
+        }
+
+        .nav-links a:hover {
+            color: var(--gold);
+        }
+
+        .cta-btn {
+            background: linear-gradient(135deg, var(--gold), #B8941F);
+            color: white;
+            padding: 0.7rem 1.5rem;
+            border: none;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        .navbar.scrolled .mobile-menu-btn {
+            color: var(--dark);
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), 
+                        url('https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80') center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            padding: 0 2rem;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            margin-bottom: 2rem;
+            font-size: 0.9rem;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .hero .gradient-text {
+            background: linear-gradient(135deg, var(--gold), var(--gold-light));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--gold), #B8941F);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(212, 175, 55, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            padding: 1rem 2rem;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            color: rgba(255, 255, 255, 0.7);
+            cursor: pointer;
+            animation: bounce 2s infinite;
+        }
+
+        /* Sections */
+        .section {
+            padding: 5rem 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-badge {
+            display: inline-block;
+            background: rgba(212, 175, 55, 0.1);
+            color: var(--gold);
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .section-title {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 1rem;
+        }
+
+        .section-divider {
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(135deg, var(--gold), var(--gold-light));
+            margin: 0 auto 1.5rem;
+            border-radius: 2px;
+        }
+
+        .section-description {
+            font-size: 1.1rem;
+            color: var(--gray);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* About Section */
+        .about {
+            background: linear-gradient(135deg, var(--white), var(--ivory));
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-content h3 {
+            font-size: 2rem;
+            color: var(--dark);
+            margin-bottom: 1.5rem;
+        }
+
+        .about-content p {
+            color: var(--gray);
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--gold);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--gray);
+        }
+
+        .about-image {
+            position: relative;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .floating-card {
+            position: absolute;
+            bottom: -20px;
+            left: -20px;
+            background: white;
+            padding: 1.5rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .floating-card-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--gold), var(--gold-light));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+        }
+
+        /* Features */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .feature-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), rgba(212, 175, 55, 0.2));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            color: var(--gold);
+            font-size: 1.8rem;
+        }
+
+        .feature-card h4 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--dark);
+            margin-bottom: 1rem;
+        }
+
+        .feature-card p {
+            color: var(--gray);
+            font-size: 0.95rem;
+        }
+
+        /* Packages Section */
+        .packages {
+            background: linear-gradient(135deg, var(--ivory), var(--white));
+        }
+
+        .packages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .package-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .package-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+        }
+
+        .package-card.popular {
+            transform: scale(1.05);
+            border: 3px solid var(--gold);
+        }
+
+        .popular-badge {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(135deg, var(--gold), #B8941F);
+            color: white;
+            text-align: center;
+            padding: 0.7rem;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .package-header {
+            padding: 2rem;
+            text-align: center;
+            padding-top: 3rem;
+        }
+
+        .package-card.popular .package-header {
+            padding-top: 4rem;
+        }
+
+        .package-icon {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            color: white;
+            font-size: 1.8rem;
+        }
+
+        .package-icon.gold {
+            background: linear-gradient(135deg, var(--gold), #B8941F);
+        }
+
+        .package-icon.green {
+            background: linear-gradient(135deg, var(--green), var(--green-light));
+        }
+
+        .package-icon.purple {
+            background: linear-gradient(135deg, #8B5CF6, #A78BFA);
+        }
+
+        .package-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .package-subtitle {
+            color: var(--gray);
+            margin-bottom: 1.5rem;
+        }
+
+        .package-price {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .package-original-price {
+            color: var(--gray);
+            text-decoration: line-through;
+            font-size: 1rem;
+        }
+
+        .discount-badge {
+            display: inline-block;
+            background: rgba(34, 197, 94, 0.1);
+            color: #16a34a;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-left: 0.5rem;
+        }
+
+        .package-features {
+            padding: 0 2rem 2rem;
+        }
+
+        .package-features ul {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+
+        .package-features li {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.8rem;
+            margin-bottom: 0.8rem;
+            font-size: 0.95rem;
+            color: var(--gray);
+        }
+
+        .check-icon {
+            width: 20px;
+            height: 20px;
+            background: rgba(34, 197, 94, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #16a34a;
+            font-size: 0.8rem;
+            flex-shrink: 0;
+            margin-top: 0.1rem;
+        }
+
+        .package-btn {
+            width: 100%;
+            padding: 1rem;
+            border: none;
+            border-radius: 10px;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            text-decoration: none;
+        }
+
+        .package-btn.gold {
+            background: linear-gradient(135deg, var(--gold), #B8941F);
+            color: white;
+        }
+
+        .package-btn.green {
+            background: linear-gradient(135deg, var(--green), var(--green-light));
+            color: white;
+        }
+
+        .package-btn.purple {
+            background: linear-gradient(135deg, #8B5CF6, #A78BFA);
+            color: white;
+        }
+
+        .package-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .package-note {
+            text-align: center;
+            font-size: 0.8rem;
+            color: var(--gray);
+            margin-top: 1rem;
+        }
+
+        /* Gallery Section */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            display: flex;
+            align-items: flex-end;
+            padding: 1.5rem;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .gallery-info {
+            color: white;
+        }
+
+        .gallery-category {
+            background: var(--gold);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            display: inline-block;
+        }
+
+        .gallery-title {
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        /* Contact Section */
+        .contact {
+            background: linear-gradient(135deg, var(--ivory), var(--white));
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            margin-top: 3rem;
+        }
+
+        .contact-form {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--dark);
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid #e5e7eb;
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--gold);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .submit-btn {
+            width: 100%;
+            background: linear-gradient(135deg, var(--gold), #B8941F);
+            color: white;
+            padding: 1.2rem;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(212, 175, 55, 0.4);
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .contact-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), rgba(212, 175, 55, 0.2));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gold);
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        .contact-details h4 {
+            font-weight: 600;
+            color: var(--dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-details p {
+            color: var(--gray);
+            font-size: 0.95rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .social-media {
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.05), rgba(212, 175, 55, 0.1));
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .social-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        .social-btn {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+
+        .social-btn:hover {
+            transform: scale(1.1);
+        }
+
+        .social-btn.whatsapp {
+            background: #25d366;
+        }
+
+        .social-btn.instagram {
+            background: linear-gradient(135deg, #e4405f, #f77737);
+        }
+
+        .social-btn.facebook {
+            background: #1877f2;
+        }
+
+        .map-container {
+            height: 250px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--dark);
+            color: white;
+            padding: 3rem 0 1.5rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h4 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: var(--gold);
+        }
+
+        .footer-section p,
+        .footer-section li {
+            color: #94a3b8;
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #374151;
+            padding-top: 1.5rem;
+            text-align: center;
+            color: #94a3b8;
+            font-size: 0.9rem;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0) translateX(-50%);
+            }
+            40% {
+                transform: translateY(-10px) translateX(-50%);
+            }
+            60% {
+                transform: translateY(-5px) translateX(-50%);
+            }
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .about-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .stats {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .packages-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .package-card.popular {
+                transform: none;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .floating-card {
+                position: static;
+                margin-top: 1rem;
+            }
+
+            .section {
+                padding: 3rem 0;
+            }
+
+            .container {
+                padding: 0 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero {
+                height: 90vh;
+            }
+
+            .hero-content {
+                padding: 0 1rem;
+            }
+
+            .nav-container {
+                padding: 0 1rem;
+            }
+
+            .contact-form,
+            .social-media {
+                padding: 1.5rem;
+            }
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--gold);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #B8941F;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <div class="logo-icon">SD</div>
+                <div class="logo-text">
+                    <h1 class="font-serif">Saung Dolken</h1>
+                    <p>Resort Syariah</p>
+                </div>
+            </div>
+            
+            <ul class="nav-links">
+                <li><a href="#hero">Beranda</a></li>
+                <li><a href="#about">Tentang</a></li>
+                <li><a href="#packages">Paket</a></li>
+                <li><a href="#gallery">Galeri</a></li>
+                <li><a href="#contact">Kontak</a></li>
+            </ul>
+            
+            <a href="https://wa.me/6281234567890" class="cta-btn" target="_blank">
+                <i class="fab fa-whatsapp"></i>
+                Hubungi Kami
+            </a>
+            
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <i class="fas fa-map-marker-alt"></i>
+                Resort Syariah Premium
+            </div>
+            
+            <h1 class="font-serif">
+                Rayakan Cinta di<br>
+                <span class="gradient-text">Surga yang Damai</span>
+            </h1>
+            
+            <p>
+                Wujudkan pernikahan dan lamaran impian Anda di Saung Dolken Resort Syariah. 
+                Suasana tropis yang romantis, fasilitas mewah, dan pelayanan islami terbaik.
+            </p>
+            
+            <div class="hero-buttons">
+                <a href="#packages" class="btn-primary">
+                    <i class="fas fa-heart"></i>
+                    Pesan Acara Anda
+                </a>
+                <a href="#about" class="btn-secondary">
+                    Pelajari Lebih Lanjut
+                </a>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator" onclick="scrollToSection('about')">
+            <i class="fas fa-chevron-down"></i>
+            <p>Scroll untuk melihat lebih</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content fade-in">
+                    <div class="section-badge">Tentang Kami</div>
+                    <h3 class="font-serif">Saung Dolken Resort Syariah</h3>
+                    <div class="section-divider" style="margin: 1.5rem 0;"></div>
+                    
+                    <p>
+                        Terletak di tengah keindahan alam tropis, Saung Dolken Resort Syariah adalah destinasi 
+                        pernikahan dan lamaran yang sempurna untuk pasangan muslim. Kami menawarkan suasana 
+                        yang damai, fasilitas mewah, dan pelayanan yang sepenuhnya sesuai dengan nilai-nilai islami.
+                    </p>
+                    
+                    <p>
+                        Dengan pemandangan hijau yang memukau dan arsitektur yang elegan, resort kami 
+                        menciptakan atmosfer romantis yang tak terlupakan untuk hari bahagia Anda.
+                    </p>
+                    
+                    <div class="stats">
+                        <div class="stat">
+                            <div class="stat-number">500+</div>
+                            <div class="stat-label">Acara Sukses</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">10+</div>
+                            <div class="stat-label">Tahun Pengalaman</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">4.9</div>
+                            <div class="stat-label">Rating Kepuasan</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-image fade-in">
+                    <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?ixlib=rb-4.0.3&auto=format&fit=crop&w=2069&q=80" alt="Saung Dolken Resort">
+                    <div class="floating-card">
+                        <div class="floating-card-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <div>
+                            <div style="font-weight: 600; color: var(--dark);">Venue Terpercaya</div>
+                            <div style="font-size: 0.9rem; color: var(--gray);">Sejak 2014</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="features fade-in">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h4>Syariah Compliant</h4>
+                    <p>Fasilitas dan pelayanan yang sepenuhnya sesuai dengan nilai-nilai islami</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h4>Suasana Tropis</h4>
+                    <p>Dikelilingi pemandangan alam hijau yang menenangkan dan udara segar</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h4>Romantis & Elegan</h4>
+                    <p>Dekorasi mewah dan suasana romantis untuk momen spesial Anda</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>Pelayanan Premium</h4>
+                    <p>Tim profesional yang berpengalaman dalam mengatur acara pernikahan</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Packages Section -->
+    <section class="section packages" id="packages">
+        <div class="container">
+            <div class="section-header fade-in">
+                <div class="section-badge">Paket Pernikahan & Lamaran</div>
+                <h2 class="section-title font-serif">Pilih Paket Impian Anda</h2>
+                <div class="section-divider"></div>
+                <p class="section-description">
+                    Kami menyediakan berbagai paket pernikahan dan lamaran yang dapat disesuaikan 
+                    dengan kebutuhan dan budget Anda
+                </p>
+            </div>
+            
+            <div class="packages-grid">
+                <!-- Paket Lamaran -->
+                <div class="package-card fade-in">
+                    <div class="package-header">
+                        <div class="package-icon green">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3 class="package-title">Paket Lamaran</h3>
+                        <p class="package-subtitle">Momen Spesial Pertama</p>
+                        <div class="package-price">Rp 15.000.000</div>
+                        <div class="package-original-price">
+                            Rp 18.000.000
+                            <span class="discount-badge">Hemat 17%</span>
+                        </div>
+                    </div>
+                    
+                    <div class="package-features">
+                        <ul>
+                            <li>
+                                <div class="check-icon"><i class="fas fa-check"></i></div>
+                                Dekorasi pelaminan lamaran
+                            </li>
+                            <li>
+                                <div class="check-icon"><i class="fas fa-check"></i></div>
+                                Tenda atau gazebo untuk 50 tamu
+                            </li>
+                            <li>
+                                <div class="check-icon"><i class="fas fa-check"></i></div>
+                                Sound system & lighting
+                            </li>
+                            <li>
+                                <div class="check-icon"><i class="fas fa-check"></i></div>
+                                Dokumentasi foto (100 foto)
+                            </li>
+                            <li>
+                                <div class="check-icon"><i class="fas fa-check"></i></div>
+                                Catering snack & minuman
+                            </li>
+                            <li>
+                                <div class="check-icon"><i class="fas fa-check"></i></div>
+                                Koordinator acara
+                            </li>
+                            <li>
+                                <div class="check-icon"><i class="fas fa-check"></i></div>
+                                Bunga segar untuk dekorasi
+                            </li>
+                        </ul>
+                        
+                        <a href="https://wa.me/6281234567890?text=Halo,%20saya%20tertarik%20dengan%20Paket%20Lamaran%20di%20Saung%20Dolken%20Resort%20Syariah.%20Bisa%20tolong%20berikan%20informasi%20lebih%20detail?" 
+                           class="package-btn green" target="_blank">
+                            <i class="fab fa-whatsapp"></i>
+                            Konsultasi Gratis
+                        </a>
+                        
+                        <p class="package-note">*Harga dapat berubah sewaktu-waktu</p>
+                    </div>
+                </div>
+                
+                <!-- Paket Pernikahan Intimate -->
+                <div class="package-card popular fade-in">
+                    <div class="popular-badge">⭐ PALING POPULER</div>
+                    <div class="package-header">
+                        <div class="package-icon gold">
+                            <i class="fas fa-crown"></i>
+                        </div>
+                        <h3 class="package-title">Paket Pernikahan Intimate</h3>
+                        <p class="package-subtitle">Pernikahan Keluarga</p>
+                        <div class="package-price">Rp 35.000.000</div>
+                        <div class="package-original-price">
+                            Rp 42.000.000
+                            <span class="discount-badge">Hemat 17%</span>
+                        </div>
+                    </div>
+                    
+                    <div class="package-features">
+                        <ul>
+                            <li>
+                                <div class="check-icon"><i class="fas fa-check"></i></div>
+                                Dekorasi pelaminan mewah
+                            </li>
+                            <li>
+                                <div class="check-icon"><i class="fas fa-check"></i></div>
+                                Venue untuk 150 tamu
+                            </li>
+                            <li>
+                                <div class="check-icon"><i class="fas fa-check"></i></div>
+                                Catering prasmanan lengkap
+                            </li>
+                            <li>
+                                <div class="check-icon"><i class="fas fa-check"></i></div>
+                                Sound system profesional
+                            </li>
+                            <li>
+                                <div class="check-icon"><i class="fas fa-check"></i></div>
+                                Dokumentasi foto & video
+                            </li>
+                            <li>
+                                <div class="check-icon"><i class="fas fa-check"></i></div>
+                                Wedding organizer
+                            </li>
+                            <li>
+                                <div class="check-icon"><i class="fas fa-check"></i></div>
+                                Bunga & dekorasi premium
+                            </li>
+                            <li>
+                                <div class="check-icon"><i class="fas fa-check"></i></div>
+                                Bridal room
+                            </li>
+                            <li>
+                                <div class="check-icon"><i class="fas fa-check"></i></div>
+                                Parkir luas
+                            </li>
+                        </ul>
+                        
+                        <a href="https://wa.me/6281234567890?text=Halo,%20saya%20tertarik%20dengan%20Paket%20Pernikahan%20Intimate%20di%20Saung%20Dolken%20Resort%20Syariah.%20Bisa%20tolong%20berikan%20informasi%20lebih%20detail?" 
+                           class="package-btn gold" target="_blank">
+                            <i class="fab fa-whatsapp"></i>
+                            Konsultasi Gratis
+                        </a>
+                        
+                        <p class="package-note">*Harga dapat berubah sewaktu-waktu</p>
+                    </div>
+                </div>
+                
+                <!-- Paket Pernikahan Premium -->
+                <div class="package-card fade-in">
+                    <div class="package-header">
+                        <div class="package-icon purple">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h3 class="package-title">Paket Pernikahan Premium</h3>
+                        <p class="package-subtitle">Pernikahan Impian</p>
+                        <div class="package-price">Rp 65.000.000</div>
+                        <div class="package-original-price">
+                            Rp 75.000.000
+                            <span class="discount-badge">Hemat 13%</span>
+                        </div>
+                    </div>
+                    
+                    <div class="package-features">
+                        <ul>
+                            <li>
+                                <div class="check-icon"><i class="fas fa-check"></i></div>
+                                Dekorasi pelaminan eksklusif
+                            </li>
+                            <li>
+                                <div class="check-icon"><i class="fas fa-check"></i></div>
+                                Venue untuk 300 tamu
+                            </li>
+                            <li>
+                                <div class="check-icon"><i class="fas fa-check"></i></div>
+                                Catering buffet premium
+                            </li>
+                            <li>
+                                <div class="check-icon"><i class="fas fa-check"></i></div>
+                                Live music & entertainment
+                            </li>
+                            <li>
+                                <div class="check-icon"><i class="fas fa-check"></i></div>
+                                Dokumentasi cinematic
+                            </li>
+                            <li>
+                                <div class="check-icon"><i class="fas fa-check"></i></div>
+                                Wedding planner dedicated
+                            </li>
+                            <li>
+                                <div class="check-icon"><i class="fas fa-check"></i></div>
+                                Dekorasi bunga mewah
+                            </li>
+                            <li>
+                                <div class="check-icon"><i class="fas fa-check"></i></div>
+                                Bridal suite deluxe
+                            </li>
+                            <li>
+                                <div class="check-icon"><i class="fas fa-check"></i></div>
+                                Valet parking
+                            </li>
+                            <li>
+                                <div class="check-icon"><i class="fas fa-check"></i></div>
+                                Welcome drink
+                            </li>
+                            <li>
+                                <div class="check-icon"><i class="fas fa-check"></i></div>
+                                Souvenir untuk tamu
+                            </li>
+                        </ul>
+                        
+                        <a href="https://wa.me/6281234567890?text=Halo,%20saya%20tertarik%20dengan%20Paket%20Pernikahan%20Premium%20di%20Saung%20Dolken%20Resort%20Syariah.%20Bisa%20tolong%20berikan%20informasi%20lebih%20detail?" 
+                           class="package-btn purple" target="_blank">
+                            <i class="fab fa-whatsapp"></i>
+                            Konsultasi Gratis
+                        </a>
+                        
+                        <p class="package-note">*Harga dapat berubah sewaktu-waktu</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Custom Package CTA -->
+            <div class="fade-in" style="text-align: center; margin-top: 3rem;">
+                <div style="background: linear-gradient(135deg, rgba(212, 175, 55, 0.05), rgba(212, 175, 55, 0.1)); padding: 2.5rem; border-radius: 20px; max-width: 800px; margin: 0 auto;">
+                    <h3 style="font-weight: 600; color: var(--dark); margin-bottom: 1rem;">Butuh Paket Khusus?</h3>
+                    <p style="color: var(--gray); margin-bottom: 1.5rem;">
+                        Kami juga menyediakan paket kustom sesuai dengan kebutuhan dan budget Anda. 
+                        Hubungi tim kami untuk konsultasi gratis dan penawaran terbaik.
+                    </p>
+                    <a href="https://wa.me/6281234567890?text=Halo,%20saya%20tertarik%20dengan%20Paket%20Kustom%20di%20Saung%20Dolken%20Resort%20Syariah.%20Bisa%20tolong%20berikan%20informasi%20lebih%20detail?" 
+                       style="display: inline-flex; align-items: center; gap: 0.5rem; background: transparent; color: var(--gold); border: 2px solid var(--gold); padding: 1rem 2rem; border-radius: 25px; text-decoration: none; font-weight: 600; transition: all 0.3s ease;" 
+                       target="_blank"
+                       onmouseover="this.style.background='var(--gold)'; this.style.color='white';"
+                       onmouseout="this.style.background='transparent'; this.style.color='var(--gold)';">
+                        <i class="fab fa-whatsapp"></i>
+                        Konsultasi Paket Kustom
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="section" id="gallery">
+        <div class="container">
+            <div class="section-header fade-in">
+                <div class="section-badge">Galeri Foto</div>
+                <h2 class="section-title font-serif">Momen Indah yang Telah Tercipta</h2>
+                <div class="section-divider"></div>
+                <p class="section-description">
+                    Lihat koleksi foto pernikahan dan lamaran yang telah diselenggarakan di 
+                    Saung Dolken Resort Syariah
+                </p>
+            </div>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item fade-in">
+                    <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Pernikahan Outdoor">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <div class="gallery-category">Pernikahan</div>
+                            <div class="gallery-title">Pernikahan Outdoor di Saung Dolken</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item fade-in">
+                    <img src="https://images.unsplash.com/photo-1606216794074-735e91aa2c92?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Dekorasi Pelaminan">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <div class="gallery-category">Dekorasi</div>
+                            <div class="gallery-title">Dekorasi Pelaminan Mewah</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item fade-in">
+                    <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=2069&q=80" alt="Acara Lamaran">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <div class="gallery-category">Lamaran</div>
+                            <div class="gallery-title">Acara Lamaran Romantis</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item fade-in">
+                    <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?ixlib=rb-4.0.3&auto=format&fit=crop&w=2069&q=80" alt="Venue Resort">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <div class="gallery-category">Venue</div>
+                            <div class="gallery-title">Venue Resort yang Indah</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item fade-in">
+                    <img src="https://images.unsplash.com/photo-1465495976277-4387d4b0e4a6?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Catering Premium">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <div class="gallery-category">Catering</div>
+                            <div class="gallery-title">Catering Premium</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item fade-in">
+                    <img src="https://images.unsplash.com/photo-1469371670807-013ccf25f16a?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Suasana Malam">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <div class="gallery-category">Pernikahan</div>
+                            <div class="gallery-title">Suasana Malam yang Romantis</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Instagram CTA -->
+            <div class="fade-in" style="text-align: center; margin-top: 3rem;">
+                <div style="background: linear-gradient(135deg, rgba(212, 175, 55, 0.05), rgba(212, 175, 55, 0.1)); padding: 2.5rem; border-radius: 20px; max-width: 800px; margin: 0 auto;">
+                    <h3 class="font-serif" style="font-size: 1.8rem; font-weight: 700; color: var(--dark); margin-bottom: 1rem;">
+                        Ingin Melihat Lebih Banyak?
+                    </h3>
+                    <p style="color: var(--gray); margin-bottom: 1.5rem;">
+                        Kunjungi Instagram kami untuk melihat lebih banyak foto dan video 
+                        pernikahan serta lamaran di Saung Dolken Resort Syariah
+                    </p>
+                    <a href="https://instagram.com/saungdolken" 
+                       style="display: inline-flex; align-items: center; gap: 0.5rem; background: linear-gradient(135deg, #e4405f, #f77737); color: white; padding: 1rem 2rem; border-radius: 25px; text-decoration: none; font-weight: 600; transition: all 0.3s ease;" 
+                       target="_blank"
+                       onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 10px 25px rgba(228, 64, 95, 0.4)';"
+                       onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+                        <i class="fab fa-instagram"></i>
+                        Kunjungi Instagram Kami
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <div class="section-header fade-in">
+                <div class="section-badge">Hubungi Kami</div>
+                <h2 class="section-title font-serif">Mari Wujudkan Acara Impian Anda</h2>
+                <div class="section-divider"></div>
+                <p class="section-description">
+                    Tim profesional kami siap membantu merencanakan pernikahan atau lamaran yang sempurna. 
+                    Hubungi kami untuk konsultasi gratis!
+                </p>
+            </div>
+            
+            <div class="contact-grid">
+                <!-- Contact Form -->
+                <div class="contact-form fade-in">
+                    <h3 style="display: flex; align-items: center; gap: 0.8rem; font-size: 1.5rem; font-weight: 700; color: var(--dark); margin-bottom: 1rem;">
+                        <i class="fas fa-paper-plane" style="color: var(--gold);"></i>
+                        Form Konsultasi
+                    </h3>
+                    <p style="color: var(--gray); margin-bottom: 2rem;">
+                        Isi form di bawah ini dan kami akan menghubungi Anda segera
+                    </p>
+                    
+                    <form id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="text" name="name" placeholder="Nama Lengkap *" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" name="phone" placeholder="Nomor Telepon *" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Email *" required>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="date" name="eventDate" required>
+                            </div>
+                            <div class="form-group">
+                                <select name="eventType" required>
+                                    <option value="">Pilih Jenis Acara *</option>
+                                    <option value="lamaran">Lamaran</option>
+                                    <option value="pernikahan-intimate">Pernikahan Intimate</option>
+                                    <option value="pernikahan-premium">Pernikahan Premium</option>
+                                    <option value="kustom">Paket Kustom</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="number" name="guestCount" placeholder="Perkiraan Jumlah Tamu *" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <textarea name="message" placeholder="Ceritakan tentang acara impian Anda... *" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">
+                            <i class="fas fa-paper-plane"></i>
+                            Kirim Konsultasi
+                        </button>
+                    </form>
+                </div>
+                
+                <!-- Contact Information -->
+                <div class="contact-info fade-in">
+                    <div class="contact-card" onclick="window.open('tel:+6281234567890')">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Telepon</h4>
+                            <p>+62 812-3456-7890</p>
+                            <p>+62 821-9876-5432</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-card" onclick="window.open('mailto:info@saungdolken.com')">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <p><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="7b12151d143b081a0e151c1f1417101e1555181416">[email&#160;protected]</a></p>
+                            <p><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="40222f2f2b292e27003321352e27242f2c2b252e6e232f2d">[email&#160;protected]</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-card" onclick="window.open('https://maps.google.com/?q=Saung+Dolken+Resort+Syariah')">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Alamat</h4>
+                            <p>Jl. Resort Syariah No. 123</p>
+                            <p>Bogor, Jawa Barat 16610</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Jam Operasional</h4>
+                            <p>Senin - Minggu: 08:00 - 22:00</p>
+                            <p style="color: var(--gold); font-weight: 600;">Konsultasi 24/7 via WhatsApp</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Social Media -->
+                    <div class="social-media">
+                        <h3 style="font-weight: 600; color: var(--dark); margin-bottom: 1rem;">
+                            Ikuti Media Sosial Kami
+                        </h3>
+                        <div class="social-buttons">
+                            <a href="https://wa.me/6281234567890" class="social-btn whatsapp" target="_blank">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                            <a href="https://instagram.com/saungdolken" class="social-btn instagram" target="_blank">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://facebook.com/saungdolken" class="social-btn facebook" target="_blank">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                        </div>
+                        <p style="color: var(--gray); font-size: 0.9rem;">
+                            Lihat foto-foto terbaru dan testimoni dari klien kami
+                        </p>
+                    </div>
+                    
+                    <!-- Map -->
+                    <div class="map-container">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.952912260219!2d106.78274731476215!3d-6.459484995363441!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69c4227f42235b%3A0x5c3c8e0b8b0b8b0b!2sBogor%2C%20West%20Java!5e0!3m2!1sen!2sid!4v1635000000000!5m2!1sen!2sid"
+                            allowfullscreen
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="Lokasi Saung Dolken Resort Syariah">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <div class="logo" style="margin-bottom: 1rem;">
+                        <div class="logo-icon">SD</div>
+                        <div class="logo-text">
+                            <h1 class="font-serif" style="color: var(--gold);">Saung Dolken</h1>
+                            <p>Resort Syariah</p>
+                        </div>
+                    </div>
+                    <p>
+                        Venue pernikahan dan lamaran islami terbaik dengan suasana tropis yang romantis dan fasilitas mewah.
+                    </p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Kontak</h4>
+                    <ul>
+                        <li>📞 +62 812-3456-7890</li>
+                        <li>✉️ <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="1b72757d745b687a6e757c7f7477707e7535787476">[email&#160;protected]</a></li>
+                        <li>📍 Jl. Resort Syariah No. 123, Bogor</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Jam Operasional</h4>
+                    <ul>
+                        <li>Senin - Minggu</li>
+                        <li>08:00 - 22:00 WIB</li>
+                        <li style="color: var(--gold); font-weight: 600;">Konsultasi 24/7 via WhatsApp</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2024 Saung Dolken Resort Syariah. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Smooth scrolling for navigation links
+        function scrollToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+
+        // Add click events to nav links
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                scrollToSection(targetId);
+            });
+        });
+
+        // Fade in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Contact form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData);
+            
+            // Create WhatsApp message
+            const message = `Halo, saya ingin berkonsultasi tentang acara:
+
+Nama: ${data.name}
+Telepon: ${data.phone}
+Email: ${data.email}
+Tanggal Acara: ${data.eventDate}
+Jenis Acara: ${data.eventType}
+Jumlah Tamu: ${data.guestCount}
+
+Pesan:
+${data.message}
+
+Terima kasih!`;
+
+            const whatsappUrl = `https://wa.me/6281234567890?text=${encodeURIComponent(message)}`;
+            window.open(whatsappUrl, '_blank');
+            
+            // Show success message
+            alert('Terima kasih! Anda akan diarahkan ke WhatsApp untuk melanjutkan konsultasi.');
+            
+            // Reset form
+            this.reset();
+        });
+
+        // Mobile menu toggle (basic implementation)
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+        });
+    </script>
+</body>
+</html>
